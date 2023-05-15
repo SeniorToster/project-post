@@ -1,0 +1,7 @@
+{
+  "name": "Project-Post",
+  "version": "1.0.0",
+  "devDependencies": {
+    "webpack": "^5.82.1"
+  }
+}
