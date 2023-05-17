@@ -9,5 +9,19 @@ export interface  BuildPaths {
 }
 export interface BuildOptions {
     mode: BuildMode,
-    paths:BuildPaths
+    isDev: boolean,
+    paths:BuildPaths,
+    port: number,
+    performanceBundle: number
+}
+export interface BuildEnv {
+    mode: BuildMode,
+    port: number
+}
+
+export interface BuildPerformance {
+    assetFilter?(assetFilename: string): boolean;
+    hints?: 'warning' | 'error' | false | undefined;
+    maxAssetSize?: number | undefined;
+    maxEntrypointSize?: number | undefined;
 }

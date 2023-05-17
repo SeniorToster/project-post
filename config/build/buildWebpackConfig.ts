@@ -1,11 +1,12 @@
 import {BuildOptions} from "./types/config";
-import webpack from "webpack";
+import {Configuration } from "webpack";
 import {buildPlugins} from "./buildPlugins";
 import {buildLoader} from "./buildLoader";
 import {buildResolve} from "./buildResolve";
+import {buildDevServer} from "./buildDevServer";
 
-export function buildWebpackConfig(options: BuildOptions) : webpack.Configuration {
- const {mode,paths} = options
+export function buildWebpackConfig(options: BuildOptions) : Configuration {
+ const {mode,paths, isDev} = options
     return   {
         mode,
         entry: paths.entry ,
@@ -14,11 +15,19 @@ export function buildWebpackConfig(options: BuildOptions) : webpack.Configuratio
             path: paths.output,
             clean: true
     },
+        performance: {
+            hints: false,
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000
+        },
         plugins: buildPlugins(paths),
             module: {
-        rules: buildLoader()
+        rules: buildLoader(options)
     },
-        resolve: buildResolve()
+        resolve: buildResolve(),
+        devtool: isDev ? 'inline-source-map': undefined,
+        devServer: buildDevServer(options)
 
     };
+
 }
