@@ -2,7 +2,7 @@
 export const MainPage = () => {
     return (
         <div>
-            main
+            main!!!!
         </div>
     );
 };
