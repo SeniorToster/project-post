@@ -1,10 +1,13 @@
 .app.light {
-
     --bg-color: #ffff;
+    --bg-color-invers: #0d1117;
     --bg-secondary-color: #010409;
 
-    --primary-color: #1f2328;
-    --secondary-color: #7c838a;
-    --link-color: #2c7edf ;
+    --main-color: #1f2328;
+    --main-color-invers: #e4ebf1;
 
+    --additional-color: #7c838a;
+    --link-color: #2c7edf ;
+    --hover-color: #f7f9f9;
+    --hover-color-invers: #2f2f2f;
 }

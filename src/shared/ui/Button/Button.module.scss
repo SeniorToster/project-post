@@ -1,0 +1,21 @@
+.Button {
+  padding: var(--size-space-s);
+  border-radius: var(--border-radius-m);
+  cursor: pointer;
+  display: flex;
+  color: var(--main-color);
+
+   &:hover {
+     background-color: var(--hover-color);
+   }
+}
+
+
+.invers {
+  color: var(--main-color-invers);
+
+  &:hover {
+    background-color: var(--hover-color-invers);
+  }
+}
+
