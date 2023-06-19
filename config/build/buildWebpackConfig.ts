@@ -20,7 +20,7 @@ export function buildWebpackConfig(options: BuildOptions) : Configuration {
             maxEntrypointSize: 512000,
             maxAssetSize: 512000
         },
-        plugins: buildPlugins(paths),
+        plugins: buildPlugins(paths, options),
             module: {
         rules: buildLoader(options)
     },
