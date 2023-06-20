@@ -1,13 +1,13 @@
 .Navbar {
-  padding: 0 var(--size-space-m);
-  height: var(--navbar-height);
-  background-color: var(--bg-color-invers);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 0 var(--size-space-m);
+    height: var(--navbar-height);
+    background-color: var(--bg-color-invers);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .links {
-  display: flex;
-  gap:var(--size-space-m);
+    display: flex;
+    gap:var(--size-space-m);
 }

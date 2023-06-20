@@ -1,25 +1,20 @@
 :root {
-  --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-m: 16px;
+    --font-line-m: 24px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family);
+    --font-size-l: 24px;
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family);
 
-  --font-size-m: 16px;
-  --font-line-m: 24px;
-  --font-m: var(--font-size-m)/ var(--font-line-m) var(--font-family);
-
-  --font-size-l: 24px;
-  --font-line-l: 32px;
-  --font-l: var(--font-size-l)/ var(--font-line-l) var(--font-family);
-
-  //размеры
-  --navbar-height: 60px;
-  --sidebar-width: 240px;
-  --sidebar-width-collapsed: 60px;
-
-
-  --size-space-m: 16px;
-  --size-space-s: 8px;
-  --size-space-sx: 4px;
-
-  --border-radius-m: 10px;
+    // размеры
+    --navbar-height: 60px;
+    --sidebar-width: 240px;
+    --sidebar-width-collapsed: 60px;
+    --size-space-m: 16px;
+    --size-space-s: 8px;
+    --size-space-sx: 4px;
+    --border-radius-m: 10px;
 
 
 }
