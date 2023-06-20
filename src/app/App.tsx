@@ -5,6 +5,7 @@ import {classNames} from "shared/lib/classNames/classNames";
 import {AppRoutes} from "app/Routes";
 import {Navbar} from "widgets/Navbar";
 import {Sidebar} from "widgets/Sidebar";
+import {Suspense} from "react";
 
 
 export const App = () => {
@@ -12,14 +13,15 @@ export const App = () => {
 
     return (
            <div className={classNames({cls:'app', additional:[theme]})}>
-              <Navbar/>
-               <div className='content'>
-                   <Sidebar/>
-                   <div className='page'>
-                       <AppRoutes/>
+               <Suspense fallback=''>
+                  <Navbar/>
+                   <div className='content'>
+                       <Sidebar/>
+                       <div className='page'>
+                           <AppRoutes/>
+                       </div>
                    </div>
-               </div>
-
+               </Suspense>
            </div>
     );
 };
