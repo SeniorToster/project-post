@@ -1,2 +1,1 @@
-export {LangSwitcher} from "features/LangSwitcher/ui/LangSwitcher";
-
+export { LangSwitcher } from 'features/LangSwitcher/ui/LangSwitcher'

@@ -1,2 +1,2 @@
-export {ThemeProvider, Theme} from "./ui/ThemeContext";
-export {useTheme} from "./lib/useTheme";
+export { ThemeProvider, Theme } from './ui/ThemeContext'
+export { useTheme } from './lib/useTheme'

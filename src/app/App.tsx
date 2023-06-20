@@ -1,18 +1,16 @@
-import "app/styles/index.scss";
-
-import {useTheme} from "app/Theme";
-import {classNames} from "shared/lib/classNames/classNames";
-import {AppRoutes} from "app/Routes";
-import {Navbar} from "widgets/Navbar";
-import {Sidebar} from "widgets/Sidebar";
-import {Suspense} from "react";
-
+import 'app/styles/index.scss'
+import { useTheme } from 'app/Theme'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { AppRoutes } from 'app/Routes'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+import { Suspense } from 'react'
 
 export const App = () => {
-  const  { theme} = useTheme()
+  const { theme } = useTheme()
 
-    return (
-           <div className={classNames({cls:'app', additional:[theme]})}>
+  return (
+           <div className={classNames({ cls: 'app', additional: [theme] })}>
                <Suspense fallback=''>
                   <Navbar/>
                    <div className='content'>
@@ -23,5 +21,5 @@ export const App = () => {
                    </div>
                </Suspense>
            </div>
-    );
-};
+  )
+}
