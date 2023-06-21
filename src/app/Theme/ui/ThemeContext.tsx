@@ -6,8 +6,8 @@ export enum Theme {
 }
 
 export interface ThemeContextProps {
-  theme?: Theme
-  setTheme?: (theme: Theme) => void
+  theme: Theme
+  setTheme: (theme: Theme) => void
 }
 
 interface Props {
@@ -16,7 +16,10 @@ interface Props {
 export const LOCAL_KEY_THEME = 'theme'
 const defaultTheme = localStorage.getItem(LOCAL_KEY_THEME) as Theme ?? Theme.LIGHT
 
-export const ThemeContext = createContext<ThemeContextProps>({})
+export const ThemeContext = createContext<ThemeContextProps>({
+  theme: defaultTheme,
+  setTheme: () => {}
+})
 export const ThemeProvider: FC<Props> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme)
 
