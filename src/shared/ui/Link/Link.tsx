@@ -8,7 +8,7 @@ export enum LinkTheme {
 }
 interface LinkProp extends LinkPropsRD {
   className?: string
-  theme?: LinkTheme
+  theme: LinkTheme
 }
 export const Link: FC<LinkProp> = (props) => {
   const {

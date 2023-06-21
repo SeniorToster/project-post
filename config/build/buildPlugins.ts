@@ -8,7 +8,7 @@ export function buildPlugins (paths: BuildPaths, { isDev }: BuildOptions): webpa
   const plugins = [
     new webpack.ProgressPlugin(),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
+      _IS_DEV_: JSON.stringify(isDev)
     }),
     new HtmlWebpackPlugin({ template: paths.html }),
     new MiniCssExtractPlugin({
