@@ -5,12 +5,13 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'app/Theme'
 import 'shared/config/i18nConfig'
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = createRoot(document.getElementById('root')!)
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider>
-                 <App/>
+                <App/>
             </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>

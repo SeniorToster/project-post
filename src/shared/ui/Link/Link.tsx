@@ -4,22 +4,22 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { type FC } from 'react'
 
 export enum LinkTheme {
-  NAVBAR = 'navbar',
+    NAVBAR = 'navbar',
 }
 interface LinkProp extends LinkPropsRD {
-  className?: string
-  theme: LinkTheme
+    className?: string
+    theme: LinkTheme
 }
 export const Link: FC<LinkProp> = (props) => {
-  const {
-    className,
-    theme,
-    to,
-    children,
-    ...otherProps
-  } = props
+    const {
+        className,
+        theme,
+        to,
+        children,
+        ...otherProps
+    } = props
 
-  return (
+    return (
         <LinkRD
             to={to}
             {...otherProps}
@@ -27,5 +27,5 @@ export const Link: FC<LinkProp> = (props) => {
         >
             {children}
         </LinkRD>
-  )
+    )
 }

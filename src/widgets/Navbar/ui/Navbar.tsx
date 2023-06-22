@@ -6,11 +6,11 @@ import { ThemeSwitcher } from 'features/ThemeSwitcher'
 import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
-  className?: string
+    className?: string
 }
 export const Navbar = ({ className }: NavbarProps) => {
-  const { t } = useTranslation()
-  return (
+    const { t } = useTranslation()
+    return (
         <div className={classNames({ cls: styles.Navbar, additional: [className] })}>
             <div className={classNames({ cls: styles.links })}>
                 <Link theme={LinkTheme.NAVBAR} to={RoutesPath.main}>{t('главная')}</Link>
@@ -18,5 +18,5 @@ export const Navbar = ({ className }: NavbarProps) => {
             </div>
             <ThemeSwitcher/>
         </div>
-  )
+    )
 }

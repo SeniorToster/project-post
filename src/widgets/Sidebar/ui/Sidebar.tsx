@@ -5,16 +5,16 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { LangSwitcher } from 'features/LangSwitcher'
 
 interface SidebarProps {
-  className?: string
+    className?: string
 }
 export const Sidebar = ({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false)
-  const onChangCollapsed = () => { setCollapsed((prev) => !prev) }
+    const [collapsed, setCollapsed] = useState(false)
+    const onChangCollapsed = () => { setCollapsed((prev) => !prev) }
 
-  return (
+    return (
         <div className={classNames({ cls: styles.Sidebar, mods: { [styles.collapsed]: collapsed }, additional: [className] })}>
-            <Button onClick={onChangCollapsed} theme={ThemeButton.INVERS}>Кнопка</Button>
+            <Button onClick={onChangCollapsed} theme={ThemeButton.INVERS}>кнопка</Button>
             <LangSwitcher/>
         </div>
-  )
+    )
 }

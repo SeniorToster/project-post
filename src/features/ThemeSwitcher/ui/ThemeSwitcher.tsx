@@ -6,11 +6,11 @@ import SunSvg from 'shared/assets/icons/sun.svg'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 
 interface ThemeSwitcherProps {
-  className?: string
+    className?: string
 }
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-  const { toggleTheme, theme } = useTheme()
-  return (
+    const { toggleTheme, theme } = useTheme()
+    return (
         <Button
             theme={ThemeButton.INVERS}
             onClick={toggleTheme}
@@ -19,5 +19,5 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             {theme === Theme.DARK ? <MoonSvg/> : <SunSvg/> }
         </Button>
 
-  )
+    )
 }

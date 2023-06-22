@@ -1,35 +1,37 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true
-  },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript'
-  ],
-  overrides: [
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: './tsconfig.json'
-  },
-  plugins: [
-    'react',
-    'i18next'
-  ],
-  settings: {
-    react: {
-      version: 'detect'
+    env: {
+        browser: true,
+        es2021: true
+    },
+    extends: [
+        'plugin:react/recommended',
+        'standard-with-typescript'
+    ],
+    overrides: [
+    ],
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: './tsconfig.json'
+    },
+    plugins: [
+        'react',
+        'i18next'
+    ],
+    settings: {
+        react: {
+            version: 'detect'
+        }
+    },
+    rules: {
+        indent: ['error', 4],
+        '@typescript-eslint/indent': ['error', 4],
+        'react/react-in-jsx-scope': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        'i18next/no-literal-string': 'error'
+    },
+    globals: {
+        _IS_DEV_: true
     }
-  },
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': ['off'],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    'i18next/no-literal-string': 'error'
-  },
-  globals: {
-    _IS_DEV_: true
-  }
 }
