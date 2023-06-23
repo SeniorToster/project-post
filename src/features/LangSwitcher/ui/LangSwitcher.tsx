@@ -1,6 +1,6 @@
 import styles from './LangSwitcher.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { Button } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 
 interface LangSwitcherProps {
@@ -13,7 +13,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             .catch((e) => { console.log(e) })
     }
     return (
-        <Button onClick={onChangeLanguage} theme={ThemeButton.INVERS} className={classNames({ cls: styles.LangSwitcher, additional: [className] })}>
+        <Button onClick={onChangeLanguage} theme='invers' className={classNames({ cls: styles.LangSwitcher, additional: [className] })}>
             {t('язык')}
         </Button>
     )

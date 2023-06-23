@@ -3,17 +3,16 @@ import styles from './Link.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { type FC } from 'react'
 
-export enum LinkTheme {
-    NAVBAR = 'navbar',
-}
+type LinkTheme = 'navbar' | 'primary'
+
 interface LinkProp extends LinkPropsRD {
     className?: string
-    theme: LinkTheme
+    theme?: LinkTheme
 }
 export const Link: FC<LinkProp> = (props) => {
     const {
         className,
-        theme,
+        theme = 'primary',
         to,
         children,
         ...otherProps

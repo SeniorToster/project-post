@@ -2,19 +2,15 @@ import styles from './Button.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { type ButtonHTMLAttributes, type FC, type ReactNode } from 'react'
 
-export enum ThemeButton {
-    PRIMARY = 'primary',
-    INVERS = 'invers',
-    CLEAR = 'clear'
-}
+type ButtonTheme = 'primary' | 'invers' | 'clear'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
-    theme: ThemeButton
+    theme?: ButtonTheme
     children: ReactNode
 }
 export const Button: FC<ButtonProps> = (props) => {
-    const { className, children, theme, ...orderProps } = props
+    const { className, children, theme = 'primary', ...orderProps } = props
     return (
         <button
             {...orderProps}

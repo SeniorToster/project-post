@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Theme, useTheme } from 'app/Theme'
 import MoonSvg from 'shared/assets/icons/moon.svg'
 import SunSvg from 'shared/assets/icons/sun.svg'
-import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { Button } from 'shared/ui/Button/Button'
 
 interface ThemeSwitcherProps {
     className?: string
@@ -12,7 +12,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const { toggleTheme, theme } = useTheme()
     return (
         <Button
-            theme={ThemeButton.INVERS}
+            theme='invers'
             onClick={toggleTheme}
             className={classNames({ cls: styles.ThemeSwitcher, additional: [className, styles[theme]] })}
         >
