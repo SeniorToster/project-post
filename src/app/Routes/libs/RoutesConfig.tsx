@@ -1,4 +1,4 @@
-import { RoutesName, RoutesPath } from 'shared/config/routesPath'
+import { RoutesName, RoutesPath } from 'shared/config/routes/routesPath'
 import { MainPage } from 'pages/MainPage'
 import { AboutPage } from 'pages/AboutPage'
 import { NotFoundPage } from 'pages/NotFoundPage'

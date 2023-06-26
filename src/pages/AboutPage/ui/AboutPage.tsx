@@ -6,5 +6,6 @@ export const AboutPage = () => {
         <div>
             {t('обо мне')}
         </div>
+
     )
 }

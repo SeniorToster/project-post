@@ -1,5 +1,5 @@
 import styles from './Navbar.module.scss'
-import { RoutesPath } from 'shared/config/routesPath'
+import { RoutesPath } from 'shared/config/routes/routesPath'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Link } from 'shared/ui/Link/Link'
 import { ThemeSwitcher } from 'features/ThemeSwitcher'
