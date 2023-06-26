@@ -3,20 +3,14 @@ module.exports = {
         browser: true,
         es2021: true
     },
-    extends: [
-        'plugin:react/recommended',
-        'standard-with-typescript'
-    ],
+    extends: ['plugin:react/recommended', 'standard-with-typescript'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         project: './tsconfig.json',
         parser: '@typescript-eslint/parser'
     },
-    plugins: [
-        'react',
-        'i18next'
-    ],
+    plugins: ['react', 'i18next'],
     settings: {
         react: {
             version: 'detect'
@@ -33,12 +27,10 @@ module.exports = {
     globals: {
         _IS_DEV_: true
     },
-    overrides: [
-        {
-            files: ['**/src/**/*.test.{ts,tsx}'],
-            rules: {
-                'i18next/no-literal-string': 'off'
-            }
+    overrides: [{
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off'
         }
-    ]
+    }]
 }
