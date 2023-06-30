@@ -24,5 +24,5 @@
     "src",
     "config",
     "./webpack.config.ts"
-  ]
+  ],
 }

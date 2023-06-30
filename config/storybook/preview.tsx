@@ -1,20 +1,35 @@
 import type { Preview } from '@storybook/react'
-import { WithThemeProvider } from './decorators/WithThemeProvider'
+import { ThemeDecorator } from 'shared/lib/storybook/ThemeDecorator'
+import { RoutersDecorator } from 'shared/lib/storybook/RoutersDecorator'
+import { I18nDecorator } from 'shared/lib/storybook/I18nDecorator'
+import 'shared/config/i18n/i18nConfig'
 
 const preview: Preview = {
     parameters: {
         backgrounds: { disable: true }
     },
-    decorators: [WithThemeProvider],
+    decorators: [RoutersDecorator, ThemeDecorator, I18nDecorator],
     globalTypes: {
         theme: {
-            description: 'Global theme for components',
+            description: 'глобальное изменине темы',
             defaultValue: 'light',
             toolbar: {
                 title: 'Theme',
                 icon: 'circlehollow',
                 items: ['light', 'dark'],
                 dynamicTitle: true
+            }
+        },
+        locale: {
+            name: 'Локализация',
+            description: 'интернационализация приложения',
+            toolbar: {
+                icon: 'globe',
+                items: [
+                    { value: 'en', title: 'Английский' },
+                    { value: 'ru', title: 'Русский' }
+                ],
+                showName: true
             }
         }
     }

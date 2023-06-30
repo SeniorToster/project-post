@@ -15,6 +15,6 @@ i18n
             escapeValue: false
         }
     })
-    .catch((e) => { console.log(e) })
+    .catch((e) => { console.log('ошибка i18n', e) })
 
 export default i18n
