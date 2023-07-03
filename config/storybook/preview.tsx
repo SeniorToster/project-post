@@ -2,7 +2,6 @@ import type { Preview } from '@storybook/react'
 import { ThemeDecorator } from 'shared/lib/storybook/ThemeDecorator'
 import { RoutersDecorator } from 'shared/lib/storybook/RoutersDecorator'
 import { I18nDecorator } from 'shared/lib/storybook/I18nDecorator'
-import 'shared/config/i18n/i18nConfig'
 
 const preview: Preview = {
     parameters: {

@@ -3,3 +3,5 @@
 /coverage
 Project-Post.iml
 .idea
+build-storybook.log
+.env
