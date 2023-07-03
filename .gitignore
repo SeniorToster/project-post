@@ -4,4 +4,8 @@
 Project-Post.iml
 .idea
 build-storybook.log
+
 .env
+.env.example
+.env.local
+.env.staging
