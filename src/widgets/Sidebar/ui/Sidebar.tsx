@@ -13,7 +13,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div data-testid='Sidebar' className={classNames({ cls: styles.Sidebar, mods: { [styles.collapsed]: collapsed }, additional: [className] })}>
-            <Button data-testid='Sidebar-toggle' onClick={onChangCollapsed} theme='invers'>кнопка</Button>
+            <Button data-testid='Sidebar-toggle' onClick={onChangCollapsed} theme='invers'>кнопка1</Button>
             <LangSwitcher/>
         </div>
     )
