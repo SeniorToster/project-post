@@ -6,6 +6,7 @@ Project-Post.iml
 build-storybook.log
 
 .env
+
 .env.example
 .env.local
 .env.staging
