@@ -12,7 +12,10 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Используем Node.js, версия '${{ matrix.node-version }}'
         uses: actions/setup-node@v1
         with:
@@ -31,3 +34,13 @@ jobs:
 
       - name: unit тесты
         run: npm run unit
+
+      - name: сборка StoryBook
+        run: npm run storybook:build
+
+      - name: Публикация в Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook:build
+          exitZeroOnChanges: true
