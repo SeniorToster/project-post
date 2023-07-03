@@ -1,0 +1,33 @@
+name: Main
+run-name: ${{ github.actor }} на Linting, testing, building
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  pipeline:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Используем Node.js, версия '${{ matrix.node-version }}'
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Установка модулей и всех зависимостей
+        run: npm install
+
+      - name: сборка production проекта
+        run: npm run build:prod
+
+      - name: анализ кода TypeScript
+        run: npm run lint:ts
+
+      - name: анализ кода Scss modules
+        run: npm run lint:scss
+
+      - name: unit тесты
+        run: npm run unit
