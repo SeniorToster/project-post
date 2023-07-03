@@ -2,9 +2,9 @@ name: Main
 run-name: ${{ github.actor }} на Linting, testing, building
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   pipeline:
     runs-on: ubuntu-20.04
