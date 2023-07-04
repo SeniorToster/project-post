@@ -2,12 +2,12 @@
 type Mods = Record<string, boolean | string>
 
 interface IClassNames {
-    cls: string
+    cls?: string
     mods?: Mods
     additional?: any[]
 }
 
-export function classNames ({ cls, mods = {}, additional = [] }: IClassNames): string {
+export function classNames ({ cls = '', mods = {}, additional = [] }: IClassNames): string {
     const filterAdditional = additional?.filter(Boolean)
     const filterMods = Object.entries(mods)
         .filter(([key, value]) => Boolean(key) && Boolean(value))

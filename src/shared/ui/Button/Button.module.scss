@@ -2,8 +2,10 @@
     padding: var(--size-space-s);
     border-radius: var(--border-radius-m);
     cursor: pointer;
-    display: flex;
     color: var(--main-color);
+    display: flex;
+    align-items: center;
+    gap: var(--size-space-s);
 
     &:hover {
         background-color: var(--hover-color);
@@ -13,7 +15,6 @@
 
 .invers {
     color: var(--main-color-invers);
-
 
     &:hover {
         background-color: var(--hover-color-invers);

@@ -20,3 +20,8 @@
     padding: var(--size-space-s);
     flex-grow: 1;
 }
+
+svg {
+    height: var(--size-svg-default);
+    width: var(--size-svg-default);
+}

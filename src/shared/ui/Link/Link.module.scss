@@ -1,7 +1,16 @@
 .Link {
-    color: var(--bg-color)
+    display: flex;
+    align-items: center;
+    gap: var(--size-space-s);
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        transition: all 0.1s ease-in-out;
+        color: var(--link-color);
+    }
 }
 
-.navbar {
+.invers {
+    color: var(--bg-color);
     font-weight: 700;
 }

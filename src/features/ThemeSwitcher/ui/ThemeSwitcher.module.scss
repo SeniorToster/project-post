@@ -1,11 +1,3 @@
-.ThemeSwitcher {
-    & > svg {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
 .dark {
     & > svg {
         fill: var(--bg-color)

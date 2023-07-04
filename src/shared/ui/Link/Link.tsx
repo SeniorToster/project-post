@@ -3,7 +3,7 @@ import styles from './Link.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { type FC } from 'react'
 
-type LinkTheme = 'navbar' | 'primary'
+type LinkTheme = 'invers' | 'primary'
 
 interface LinkProp extends LinkPropsRD {
     className?: string

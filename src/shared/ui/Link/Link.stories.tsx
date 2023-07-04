@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Link } from './Link'
+import { InversDecorator } from 'shared/lib/storybook/InversDecorator'
 
 const meta = {
     title: 'shared/Link',
@@ -18,10 +19,11 @@ export const Primary: Story = {
     }
 }
 
-export const Navbar: Story = {
+export const Invers: Story = {
     args: {
-        theme: 'navbar',
+        theme: 'invers',
         children: 'Link',
         to: '/'
-    }
+    },
+    decorators: [InversDecorator]
 }

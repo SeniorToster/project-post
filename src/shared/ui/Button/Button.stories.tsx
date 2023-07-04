@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './Button'
+import { InversDecorator } from 'shared/lib/storybook/InversDecorator'
 
 const meta = {
     title: 'shared/Button',
@@ -21,7 +22,8 @@ export const Invers: Story = {
     args: {
         theme: 'invers',
         children: 'Button'
-    }
+    },
+    decorators: [InversDecorator]
 }
 
 export const clear: Story = {

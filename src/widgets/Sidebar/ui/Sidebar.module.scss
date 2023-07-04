@@ -2,9 +2,35 @@
     width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
     background-color: var(--bg-color-invers);
-
+    transition: all 0.2s ease-in-out;
 }
+
+.links_wrapper {
+    padding-left: var(--size-space-s);
+    display: flex;
+    flex-direction: column;
+    gap:var(--size-space-m);
+}
+
+.link_item {
+    & > svg {
+        flex-shrink: 0;
+    }
+
+    & > span {
+        flex-shrink: 0;
+    }
+}
+
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+    transition: all 0.2s ease-in-out;
+
+    .link_item {
+        & > span {
+            display: none;
+        }
+    }
 }
+
