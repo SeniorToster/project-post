@@ -4,12 +4,16 @@
 @import "themes/light";
 @import "themes/dark";
 
-.app {
+body {
     font: var(--font-m);
     background-color: var(--bg-color);
     color: var(--main-color);
     min-height: 100vh;
+}
 
+svg {
+    height: var(--size-svg-default);
+    width: var(--size-svg-default);
 }
 
 .content {
@@ -21,7 +25,3 @@
     flex-grow: 1;
 }
 
-svg {
-    height: var(--size-svg-default);
-    width: var(--size-svg-default);
-}

@@ -15,6 +15,7 @@ interface Props {
 }
 export const LOCAL_KEY_THEME = 'theme'
 const defaultTheme = localStorage.getItem(LOCAL_KEY_THEME) as Theme ?? Theme.LIGHT
+document.documentElement.dataset.theme = defaultTheme
 
 export const ThemeContext = createContext<ThemeContextProps>({
     theme: defaultTheme,

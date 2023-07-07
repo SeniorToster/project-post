@@ -12,6 +12,7 @@ export const useTheme = (): UseThemeRes => {
     const toggleTheme = () => {
         const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK
         localStorage.setItem(LOCAL_KEY_THEME, newTheme)
+        document.documentElement.dataset.theme = newTheme
         setTheme(newTheme)
     }
     return { toggleTheme, theme }
