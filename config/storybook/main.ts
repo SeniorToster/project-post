@@ -18,6 +18,10 @@ const config: StorybookConfig = {
     staticDirs: ['../../public'],
     webpackFinal: async config => {
         // @ts-expect-error: can't be undefined
+        config.resolve.alias = {
+            entities: path.resolve(__dirname, '..', '..', 'src', 'entities')
+        }
+        // @ts-expect-error: can't be undefined
         config.resolve.modules.push(path.resolve(__dirname, '..', '..', 'src'))
         // @ts-expect-error: can't be undefined
         config.module.rules = config.module.rules.map((rule) => {

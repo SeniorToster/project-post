@@ -33,7 +33,8 @@ export default {
     ],
     moduleNameMapper: {
         '\\.(s?css)$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        'entities/(.*)': '<rootDir>src/entities/$1'
     }
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -42,7 +43,7 @@ export default {
     // bail: 0,
 
     // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "C:\\Users\\Тостер\\AppData\\Local\\Temp\\jest",
+    // cacheDirectory: "CounterSchema:\\Users\\Тостер\\AppData\\Local\\Temp\\jest",
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
     // collectCoverageFrom: undefined,

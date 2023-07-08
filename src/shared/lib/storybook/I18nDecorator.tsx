@@ -13,7 +13,7 @@ export const I18nDecorator: Decorator = (Story, context) => {
 
     return (
         <Suspense fallback={<div>loading translations...</div>}>
-            <Story />
+            {Story()}
         </Suspense>
     )
 }

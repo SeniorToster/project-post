@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 export const RoutersDecorator: Decorator = (Story) => {
     return (
         <BrowserRouter>
-            <Story />
+            {Story()}
         </BrowserRouter>
     )
 }

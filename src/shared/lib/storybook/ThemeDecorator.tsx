@@ -9,5 +9,5 @@ export const ThemeDecorator: Decorator = (Story, context) => {
         document.documentElement.dataset.theme = theme
     }, [theme])
 
-    return <Story />
+    return Story()
 }
