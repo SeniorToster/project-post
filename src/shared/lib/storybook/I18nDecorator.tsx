@@ -9,7 +9,7 @@ export const I18nDecorator: Decorator = (Story, context) => {
     useEffect(() => {
         i18n.changeLanguage(locale).catch(console.log)
     },
-    [locale])
+    [locale, i18n])
 
     return (
         <Suspense fallback={<div>loading translations...</div>}>
