@@ -14,7 +14,8 @@
     "unit": "jest --config ./config/jest/jest.config.ts",
     "unit:chromatic": "npx chromatic --project-token --build-script-name storybook:build",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "prepare": "husky install"
   },
   "main": "index.js",
   "dependencies": {
@@ -88,7 +89,8 @@
     "webpack": "^5.82.1",
     "webpack-bundle-analyzer": "^4.9.0",
     "webpack-cli": "^5.1.1",
-    "webpack-dev-server": "^4.15.0"
+    "webpack-dev-server": "^4.15.0",
+    "husky": "^8.0.0"
   },
   "repository": {
     "type": "git",
