@@ -1,3 +1,7 @@
+.wrapper_button {
+    display: flex;
+}
+
 .Button {
     padding: var(--size-space-s);
     border-radius: var(--border-radius-m);
@@ -19,5 +23,9 @@
     &:hover {
         background-color: var(--hover-color-invers);
     }
+}
+
+.layout {
+    margin-left: calc(100px + var(--size-space-s));
 }
 

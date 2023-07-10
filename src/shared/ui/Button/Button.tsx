@@ -8,15 +8,24 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     theme?: ButtonTheme
     children: ReactNode
+    layout?: boolean
 }
 export const Button: FC<ButtonProps> = (props) => {
-    const { className, children, theme = 'primary', ...orderProps } = props
+    const {
+        className,
+        children,
+        theme = 'primary',
+        layout = false,
+        ...orderProps
+    } = props
 
     return (
-        <button
-            {...orderProps}
-            className={classNames({ cls: styles.Button, additional: [className, styles[theme]] })}>
-            {children}
-        </button>
+        <div className={styles.wrapper_button}>
+            <button
+                {...orderProps}
+                className={classNames({ cls: styles.Button, mods: { [styles.layout]: layout }, additional: [className, styles[theme]] })}>
+                {children}
+            </button>
+        </div>
     )
 }

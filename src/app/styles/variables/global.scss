@@ -19,10 +19,14 @@
     --size-space-sx: 4px;
     --size-svg-default: 30px;
     --border-radius-m: 10px;
+    --border-radius-s: 5px;
 
     // z-index
     --index-modal: 5;
 
     // цвета
-    --overlay-color: rgba(0 0 0 / 50%)
+    --overlay-color: rgba(0 0 0 / 50%);
+
+    // тень
+    --shadow-input: 0 5px 10px 2px rgb(76 152 247 / 10%);
 }

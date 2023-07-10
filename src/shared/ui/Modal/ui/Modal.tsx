@@ -4,7 +4,7 @@ import { type MouseEvent, type ReactNode, useCallback, useEffect, useRef } from 
 import { Portal } from 'shared/ui/Portal/Portal'
 import { useBoolean } from 'shared/hooks/useBoolean'
 
-interface ModalProps {
+export interface ModalProps {
     className?: string
     children: ReactNode
     status: boolean

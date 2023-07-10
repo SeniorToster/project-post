@@ -43,6 +43,10 @@ li {
     list-style-type: none;
 }
 
+input {
+    all: unset;
+}
+
 input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,

@@ -1,0 +1,45 @@
+.horizontal {
+    flex-direction: column;
+    align-items: start;
+
+    & > p {
+        width: 0;
+    }
+}
+
+.vertical {
+    & > p {
+        width: 100px;
+        text-align: end;
+    }
+
+    & > input {
+        margin-right: 100px;
+    }
+}
+
+.Input {
+    display: flex;
+    align-items: center;
+    gap: var(--size-space-s);
+
+    & > input {
+        border: 0.5px var(--main-color) solid;
+        border-radius: var(--border-radius-s);
+        outline: none;
+        padding: var(--size-space-s);
+        transition: all 0.1s ease-in-out;
+
+        &:focus {
+            border-color: var(--link-color);
+            box-shadow: var(--shadow-input);
+            transition: all 0.1s ease-in-out;
+        }
+
+        &:hover {
+            cursor: text;
+            border-color: var(--link-color);
+            transition: all 0.1s ease-in-out;
+        }
+    }
+}
