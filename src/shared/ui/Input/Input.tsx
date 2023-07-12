@@ -3,11 +3,12 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { type ChangeEvent, type InputHTMLAttributes, memo, useEffect, useRef } from 'react'
 
 type InputTheme = 'primary'
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
     label?: string
     theme: InputTheme
     layout?: 'vertical' | 'horizontal' | 'inline'
     focus?: boolean
+    onChange?: (value: string) => void
 }
 export const Input = memo((props: InputProps) => {
     const {
@@ -22,7 +23,7 @@ export const Input = memo((props: InputProps) => {
     } = props
     const inputRef = useRef<HTMLInputElement | null>(null)
     const onChangeHandle = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e)
+        onChange?.(e.target.value)
     }
 
     useEffect(() => {

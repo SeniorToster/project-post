@@ -1,7 +1,8 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        jest: true
     },
     extends: [
         'plugin:react/recommended',
@@ -9,12 +10,15 @@ module.exports = {
         'plugin:react-hooks/recommended'
     ],
     parserOptions: {
+        ecmaFeatures: {
+            jsx: true
+        },
         ecmaVersion: 'latest',
         sourceType: 'module',
         project: ['./tsconfig.json'],
         parser: '@typescript-eslint/parser'
     },
-    plugins: ['react', 'i18next'],
+    plugins: ['react', 'i18next', 'react-hooks'],
     settings: {
         react: {
             version: 'detect'
@@ -34,7 +38,7 @@ module.exports = {
         _IS_DEV_: true
     },
     overrides: [{
-        files: ['**/src/**/*.test.{ts,tsx}'],
+        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {
             'i18next/no-literal-string': 'off'
         }
